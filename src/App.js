@@ -29,6 +29,7 @@ function App() {
     <ContextProvider>
         <button onClick={ () => navigate("/")}><h1>Home</h1></button><Outlet />
         <button onClick={ () => navigate("/Playlist")}><h1>Playlist</h1></button>
+        <button onClick={ () => navigate("/About")}><h1>About</h1></button>
         <button onClick={() => handlelike()}>Like!</button>
         <button onClick={() => handledislike()}>disLike!</button>
         <h1 >THE SONG IS {feedBack}</h1>

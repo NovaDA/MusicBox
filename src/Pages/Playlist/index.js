@@ -12,7 +12,7 @@ const Playlist = () => {
         console.log(songs);
         if(songs !== undefined)
         return songs.map(p => <tr><td>{p.name}</td><td><img src={p.img} /></td><td>{p.releaseDate}</td><td><button onClick={ () => playSong(p)}>Played</button>
-        <button onClick={ () => deleteSong(p)}>Delete</button></td><td><embed src={p.songURL}  allow="encrypted-media" /></td></tr>)
+        <button onClick={ () => deleteSong(p)}>Delete</button></td><td><iframe id="frame" className='music-player' src={p.songURL}  allow="encrypted-media" ></iframe></td></tr>)
     }
 
       function playSong(e){
@@ -31,7 +31,6 @@ const Playlist = () => {
     
     return (
         <>
-       
           <table style={{ border: "none", width: "80vw", textAlign: "center" }}>
             <thead>
               <tr>

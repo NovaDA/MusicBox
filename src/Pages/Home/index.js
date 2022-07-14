@@ -18,7 +18,7 @@ const Home = () => {
       }
 
       const renderRows = () => {
-        return <tr><td>{song.name}</td><td><img src={song.img} /></td><td>{song.releaseDate}</td><td><embed src={song.songURL}  allow="encrypted-media" /></td></tr>
+        return <tr><td>{song.name}</td><td><img src={song.img} /></td><td>{song.releaseDate}</td><td><embed className='music-player' src={song.songURL}  allow="encrypted-media" /></td></tr>
       }
 
     // const renderRows = () => {
